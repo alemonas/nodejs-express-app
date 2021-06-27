@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 
 import userRouter from './resources/user/user.router'
 import listRouter from './resources/list/list.router'
+import itemRouter from './resources/item/item.router'
 
 export const app = express()
 const port = 5000
@@ -21,7 +22,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/user', userRouter)
-app.use('api/list', listRouter)
+app.use('/api/list', listRouter)
+app.use('/api/item', itemRouter)
 
 export const start = () => {
   try {
