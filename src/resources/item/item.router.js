@@ -9,6 +9,6 @@ router
   .route('/:id')
   .get(controllers.getOne)
   .put(controllers.updateOne)
-  .delete(controllers.delete)
+  // .delete(controllers.delete)
 
 export default router
